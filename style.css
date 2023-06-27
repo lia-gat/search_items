@@ -1,0 +1,125 @@
+.sunsistem {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#banana {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 300px 0 0 90px;
+
+}
+
+#apple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 400px 0 0 450px;
+}
+
+#orange {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 190px 0 0 690px;
+}
+
+#breakfast {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 200px 0 0 120px;
+}
+
+#fried_chichen {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 360px 0 0 60px;
+}	
+
+#grapes{
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 430px 0 0 170px;
+}
+
+#nuts {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 450px 0 0 360px;
+	
+}
+
+#onion {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 290px 0 0 400px;
+}
+
+#pumpkin {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px 0 0 550px;
+	
+}
+
+#sandwiches {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 480px 0 0 30px;
+	
+}
+
+#tea {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 470px 0 0 690px;
+}
+
+#сupcake {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 340px 0 0 620px;
+}
+
+#soup {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px 0 0 50px;
+}
+
+#pizza {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 150px 0 0 400px;
+}
+
+#ice_cream {
+	position: absolute;
+    top: 0;
+    left: 0;
+    margin: 550px 0 0 550px;
+}
+
+#message {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    background-color: black;
+    color: white;
+    font-size: 20pt;	
+    top: 0;
+    left: 0;
+    margin: 100px 0 0 320px;
+}

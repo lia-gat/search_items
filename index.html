@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Игра</title>
+
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1></h1>
+
+<div class="sunsistem">
+	<img src="images/background.jpg" width="852" height="640">
+</div>
+
+<span class="planeti" >
+	<img id="apple" src="images/apple.png" width="60" height="65">
+	<img id="banana" src="images/banana.png" width="60" height="60">
+	<img id="orange" src="images/orange.png" width="60" height="60">
+	<img id="breakfast" src="images/breakfast.png" width="100" height="75">
+	<img id="fried_chichen" src="images/fried_chichen.png" width="100" height="60">
+	<img id="grapes" src="images/grapes.png" width="130" height="75">
+	<img id="nuts" src="images/nuts.png" width="100" height="75">
+	<img id="onion" src="images/onion.png" width="50" height="50">
+	<img id="pumpkin" src="images/pumpkin.png" width="100" height="75">
+	<img id="sandwiches" src="images/sandwiches.png" width="80" height="60">
+	<img id="tea" src="images/tea.png" width="60" height="55">
+	<img id="сupcake" src="images/сupcake.png" width="100" height="100">
+	<img id="soup" src="images/soup.png" width="100" height="100">
+	<img id="pizza" src="images/pizza.png" width="100" height="100">
+	<img id="ice_cream" src="images/ice_cream.png" width="100" height="100">
+
+
+</span>
+
+<span id="message"></span>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+"use strict";
+
+const MASSIV = [
+	"apple",
+	"banana",
+	"orange",
+	"breakfast",
+	"fried_chichen",	
+	"grapes",
+	"nuts",
+	"onion",
+	"pumpkin",
+	"sandwiches",
+	"tea",
+	"сupcake",
+	"soup",
+	"pizza",
+	"ice_cream"
+	
+];
+
+// https://stackoverflow.com/a/2450976
+const shuffle = array => {
+	let currentIndex = array.length, randomIndex;
+
+	// While there remain elements to shuffle.
+	while (currentIndex !== 0) {
+
+		// Pick a remaining element.
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// And swap it with the current element.
+		[array[currentIndex], array[randomIndex]] = [
+		array[randomIndex], array[currentIndex]];
+		}
+
+	return array;
+}
+
+const shuffledObjects = shuffle(MASSIV);
+let currentIndex = 0;
+
+const addEventListener = () => {
+	if (currentIndex >= shuffledObjects.length) {
+		document.getElementById("message").innerText = "Вы прошли игру!";
+		return;
+		}
+
+	document.getElementById("message").innerText = "Найди " + shuffledObjects[currentIndex];
+
+	document.getElementById(shuffledObjects[currentIndex]).addEventListener('click', function (event) {
+			event.preventDefault();
+
+			this.style.opacity = '0';
+			this.style.transition = '0.5s';
+			var elClone = this.cloneNode(true); this.parentNode.replaceChild(elClone, this);
+			++currentIndex;
+
+			addEventListener();
+		});
+};
+
+addEventListener();
+
+</script>
